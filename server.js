@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const passport = require("passport");
 const cors = require("cors");
+require("dotenv").config();
 
 const key = require("./config");
 const userRoutes = require("./routes/user");
