@@ -20,4 +20,16 @@ router.get(
   todoController.selectTodo
 );
 
+router.delete(
+  "/:todoId",
+  passport.authenticate("jwt", { session: false }),
+  todoController.deleteTodo
+);
+
+router.put(
+  "/:todoId/finish",
+  passport.authenticate("jwt", { session: false }),
+  todoController.finishTodo
+);
+
 module.exports = router;
