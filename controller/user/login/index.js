@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
+const keys = require("../../../config");
 
 const { validateLoginInput, isEmpty } = require("../../../validator");
 const User = require("../../../models/User");
@@ -30,7 +31,19 @@ const login = async (req, res) => {
       });
     }
 
-    return res.json(user);
+    const payload = {
+      id: user.id,
+      username: user.username
+    };
+
+    const token = await jwt.sign(payload, keys.secretOrKey, {
+      expiresIn: 3600
+    });
+
+    return res.json({
+      success: true,
+      token: `Bearer ${token}`
+    });
   } catch (err) {
     return res.status(417).json({
       error: {
