@@ -17,7 +17,6 @@ app.use(helmet());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(morgan("dev"));
 app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
