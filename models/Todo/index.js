@@ -22,7 +22,7 @@ const todoSchema = new Schema({
   },
   finishDate: {
     type: Date,
-    default: Date.now()
+    default: ""
   },
   deadline: {
     type: Date,

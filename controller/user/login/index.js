@@ -37,7 +37,7 @@ const login = async (req, res) => {
     };
 
     const token = await jwt.sign(payload, keys.secretOrKey, {
-      expiresIn: 3600
+      expiresIn: 360000
     });
 
     return res.json({

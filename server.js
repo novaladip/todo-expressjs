@@ -7,6 +7,7 @@ const passport = require("passport");
 
 const key = require("./config");
 const userRoutes = require("./routes/user");
+const todoRouters = require("./routes/todo");
 
 const app = server();
 const PORT = process.env.PORT || 5000;
@@ -28,5 +29,6 @@ mongoose
   .catch(() => console.log("failed to connect to db"));
 
 app.use("/users", userRoutes);
+app.use("/todo", todoRouters);
 
 app.listen(PORT, () => console.log(`Server running on localhost:${PORT}`));
