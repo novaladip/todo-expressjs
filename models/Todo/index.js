@@ -14,7 +14,7 @@ const todoSchema = new Schema({
   },
   createdDate: {
     type: Date,
-    default: Date.now()
+    default: Date.now
   },
   isFinish: {
     type: Boolean,

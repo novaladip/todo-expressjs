@@ -1,6 +1,6 @@
 const key = {
   secretOrKey: process.env.secretOrKey,
-  dbURI: process.env.DB_URI
+  dbURI: process.env.dbURI
 };
 
 module.exports = key;
