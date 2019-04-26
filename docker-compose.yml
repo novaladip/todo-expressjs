@@ -1,15 +1,26 @@
 version: '3'
 services:
   app:
-    container_name: docker-node-mongo
+    container_name: app
     restart: always
     build: .
     ports:
-      - '80:3000'
+      - '3000:3000'
     links:
       - mongo
   mongo:
     container_name: mongo
+    restart: always
     image: mongo
     ports:
       - '27017:27017'
+  nginx:
+    container_name: nginx
+    image: nginx
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - '80:80'
+    depends_on:
+      - app
+      - mongo
