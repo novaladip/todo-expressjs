@@ -1,3 +1,4 @@
+"use strict";
 const createTodo = require("./create");
 const deleteTodo = require("./delete");
 const { getAllTodos, selectTodo } = require("./read");

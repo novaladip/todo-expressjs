@@ -1,3 +1,4 @@
+"use strict";
 const Todo = require("../../models/Todo");
 const { isEmpty } = require("../../utils");
 

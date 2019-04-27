@@ -1,3 +1,4 @@
+"use strict";
 const router = require("express").Router();
 const passport = require("passport");
 const todoController = require("../../controller/todo");

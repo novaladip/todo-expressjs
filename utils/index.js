@@ -1,3 +1,4 @@
-const isEmpty = require("./isEmpty");
+"use strict";
+const isEmpty = require("./is-empty");
 
 module.exports = { isEmpty };

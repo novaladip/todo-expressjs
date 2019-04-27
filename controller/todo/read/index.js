@@ -1,3 +1,5 @@
+"use strict";
+
 const Todo = require("../../../models/Todo");
 
 const read = {};

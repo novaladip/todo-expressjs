@@ -1,3 +1,4 @@
+"use strict";
 const validateTodoInput = require("./validator");
 const Todo = require("../../../models/Todo");
 

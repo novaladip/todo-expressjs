@@ -1,7 +1,8 @@
 const key = {
-  secretOrKey: process.env.secretOrKey,
-  dbURI: process.env.dbURI,
-  dockerDbURI: process.env.dockerDbURI
+  db: {
+    uri: process.env.stage === 0 ? process.env.dockerDbURI : process.env.dbURI
+  },
+  secretOrKey: process.env.secretOrKey
 };
 
 module.exports = key;
