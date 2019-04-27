@@ -42,6 +42,4 @@ const res404 = {
   }
 };
 
-app.all("*", (req, res) => res.status(404).json(res404));
-
 app.listen(PORT, () => console.log(`Server running on localhost:${PORT}`));
