@@ -1,4 +1,4 @@
-const isEmpty = require("../isEmpty");
+const { isEmpty } = require("../../../../utils");
 
 const validateLoginInput = value => {
   const error = {};

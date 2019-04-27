@@ -1,9 +1,9 @@
 const bcrypt = require("bcryptjs");
-const passport = require("passport");
-const jwt = require("jsonwebtoken");
-const keys = require("../../../config");
 
-const { validateLoginInput, isEmpty } = require("../../../validator");
+const jwt = require("jsonwebtoken");
+const validateLoginInput = require("./validator");
+const { isEmpty } = require("../../../utils");
+const keys = require("../../../config");
 const User = require("../../../models/User");
 
 const login = async (req, res) => {

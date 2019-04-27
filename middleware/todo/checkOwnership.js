@@ -1,5 +1,5 @@
 const Todo = require("../../models/Todo");
-const { isEmpty } = require("../../validator");
+const { isEmpty } = require("../../utils");
 
 async function checkTodoOwnership(req, res, next) {
   try {

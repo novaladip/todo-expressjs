@@ -1,6 +1,8 @@
 const bcrypt = require("bcryptjs");
+
+const validateRegisterInput = require("./validator");
 const User = require("../../../models/User");
-const { isEmpty, validateRegisterInput } = require("../../../validator");
+const { isEmpty } = require("../../../utils");
 
 const register = async (req, res) => {
   try {
@@ -34,6 +36,7 @@ const register = async (req, res) => {
     const newUser = await User.create(userData);
     return res.json(newUser);
   } catch (err) {
+    console.log(err);
     return res.status(417).json({
       error: {
         message: "Unknown error occurs, please try again later."

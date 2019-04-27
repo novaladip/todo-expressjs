@@ -1,5 +1,5 @@
 const Validator = require("validator");
-const isEmpty = require("../isEmpty");
+const { isEmpty } = require("../../../../utils");
 
 const validateTodoInput = value => {
   const error = {};
@@ -27,6 +27,7 @@ const validateTodoInput = value => {
   if (!isEmpty(deadline)) {
     const inputDate = new Date(deadline);
     const now = new Date();
+    console.log({ inputDate, now });
     if (inputDate < now) {
       error.deadline = "Please be serious on setting a deadline";
     }

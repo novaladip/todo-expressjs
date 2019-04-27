@@ -1,5 +1,5 @@
+const validateTodoInput = require("./validator");
 const Todo = require("../../../models/Todo");
-const { validateTodoInput } = require("../../../validator");
 
 const createTodo = async (req, res) => {
   try {
