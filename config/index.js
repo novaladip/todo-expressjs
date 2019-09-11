@@ -1,8 +1,8 @@
 const key = {
   db: {
-    uri: process.env.stage === 0 ? process.env.dockerDbURI : process.env.dbURI
+    uri: "localhost:27017"
   },
-  secretOrKey: process.env.secretOrKey
+  secretOrKey: "dsdadasecret"
 };
 
 module.exports = key;
